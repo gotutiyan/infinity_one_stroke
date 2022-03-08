@@ -1,0 +1,32 @@
+/* html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; 
+  } */
+
+/* body{
+position: fixed;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom:0px;
+} */
+html, body{
+    overflow: hidden;
+  }
+  
+canvas{
+    display: block;
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+#tweet{
+    background-color: dodgerblue;
+    color: white;
+    border: 0px none;
+}
