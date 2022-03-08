@@ -218,7 +218,7 @@ function tweet(){
             tweet_text += '世界:' + (i+1) + ',ステージ:' + clear_count[i] + '%0A';
         }
     }
-    let tweet_url = 'gotutiyan.github.io/htmltest' + '%0A';
+    let tweet_url = 'gotutiyan.github.io/infinity_one_stroke' + '%0A';
     let tweet_hashtag = '無限一筆書き' + '%0A'
     let link = 'https://twitter.com/intent/tweet?'
         + 'text=' + tweet_text
