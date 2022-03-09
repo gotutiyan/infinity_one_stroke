@@ -224,6 +224,7 @@ function load_progress(){
             clear_count[i] = count;
         }
     }
+    save_cookie();
     init_state();
 }
 
