@@ -200,6 +200,33 @@ function load_cookie(){
     }
 }
 
+function show_progress(){
+    let progress = ''
+    for(let i=0; i<clear_count.length; i++){
+        // console.log('ClearCount' + i + '=' + clear_count[i]);
+        progress += 'W' + i + 'S' + clear_count[i] + 'o';
+    }
+    let obj = document.getElementById('progress_str');
+    obj.innerText = progress;
+    return progress
+}
+
+function load_progress(){
+    progress = window.prompt("W0から始まる復元用コードを入力してください．", "");
+    for(let i=0; i<clear_count.length; i++){
+        let count = int(progress
+        .split('o')
+        .find(row => row.startsWith('W' + i))
+        .split('S')[1]);
+        if(count == undefined){
+            clear_count[i] = 0;
+        }else{
+            clear_count[i] = count;
+        }
+    }
+    init_state();
+}
+
 function reset_game(){
     let can_rest = confirm('ゲームをリセットしていいですか？\n進行状況は全て破棄されます．')
     if(can_rest){
