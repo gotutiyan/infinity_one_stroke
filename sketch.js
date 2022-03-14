@@ -181,9 +181,11 @@ function confirm_cookie(){
 
 function save_cookie(){
     if(!can_use_cookie)return;
+    var now = new Date();
+    now.setTime(now.getTime() + COOKIE_EXPIRES*24*60*60*1000);
     for(let i=0; i<clear_count.length; i++){
         // console.log('ClearCount' + i + '=' + clear_count[i]);
-        document.cookie = 'ClearCount' + i + '=' + clear_count[i];
+        document.cookie = 'ClearCount' + i + '=' + clear_count[i] + "; expires=" + now.toGMTString();
     }
     console.log('Saved to cookie:', document.cookie);
 }

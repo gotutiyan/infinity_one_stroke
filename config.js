@@ -8,6 +8,7 @@ const WHITE_ID=0;
 const WROTE_ID=1;
 const BLOCK_ID=2;
 const limitation_tiles_ratio=0.8;
+const COOKIE_EXPIRES=365;
 
 const tile_colors=[
     '#84302F',
